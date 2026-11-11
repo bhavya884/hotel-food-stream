@@ -16,7 +16,7 @@ for _ in range(100):
 
     cur.execute(
         """
-        INSERT INTO orders
+        INSERT INTO bronze.raw_orders
             (guest_name, dish, quantity, price, order_type, ordered_at)
         VALUES (%s, %s, %s, %s, %s, %s)
         """,

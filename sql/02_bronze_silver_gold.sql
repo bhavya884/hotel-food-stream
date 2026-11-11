@@ -1,0 +1,7 @@
+CREATE SCHEMA IF NOT EXISTS bronze;
+CREATE SCHEMA IF NOT EXISTS silver;
+CREATE SCHEMA IF NOT EXISTS gold;
+
+ALTER TABLE public.orders SET SCHEMA bronze;
+
+ALTER TABLE bronze.orders RENAME TO raw_orders;
